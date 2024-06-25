@@ -1,6 +1,7 @@
 import About from "@/Components/About";
 import Contact from "@/Components/Contact";
 import Hero from "@/Components/Hero";
+import Nav from "@/Components/Nav";
 import Projects from "@/Components/Projects";
 import Skills from "@/Components/Skills";
 import Footer from "@/Shared/Footer";
@@ -9,16 +10,19 @@ import Particle from "@/Utils/Particles";
 
 export default function Home() {
   return (
-    <main className="bg-[#000319] overflow-hidden  sm:px-10 px-5">
+    <main className="bg-[#000319] flex flex-col min-h-screen overflow-hidden sm:px-10 px-5">
       <div className=" container mx-auto w-full">
-        <Particle/>
+        <Particle />
         <Navbar />
-        <Hero/>
-        <About/>
-        <Skills/>
-        <Projects/>
-        <Contact/>
-        <Footer/>
+        {/* <Nav/> */}
+        <div className="mt-16">
+          <Hero />
+        </div>
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+        <Footer />
       </div>
     </main>
   );
