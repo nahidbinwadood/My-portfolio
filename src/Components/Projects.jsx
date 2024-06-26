@@ -22,7 +22,8 @@ const Projects = () => {
               height={240}
               width={540}
               alt="eliteEstate"
-              src="/assets/elite.png"
+              // src="/assets/elite.png"
+              src="/assets/VolunteerHub.png"
             />
           </div>
           <div>
