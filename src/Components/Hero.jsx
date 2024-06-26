@@ -74,7 +74,7 @@ const Hero = () => {
       <motion.div
        initial={{x:100,opacity:0}}
        animate={{x:0,opacity:1}}
-       transition={{duration:0.8,delay:0.8}}
+       transition={{duration:0.8,delay:0.6}}
       >
         <Image
           className="rounded-full"

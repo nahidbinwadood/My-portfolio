@@ -58,7 +58,7 @@ export default function Particle() {
                 color: "#e0f2fe",
                 distance: 150,
                 enable: true,
-                opacity: 0.5,
+                opacity: 0.35,
                 width: 1,
               },
               move: {
