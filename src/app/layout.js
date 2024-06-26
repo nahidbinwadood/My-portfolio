@@ -12,11 +12,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-    
-        {children}
-
-      </body>
+      <head>
+        <link rel="icon" href="/assets/nahid.png"   />
+      </head>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

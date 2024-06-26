@@ -1,8 +1,9 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { FaGithub } from "react-icons/fa";
-
+import { motion } from "framer-motion";
 const Projects = () => {
   return (
     <div id="projects" className="text-white mt-24">
@@ -10,7 +11,11 @@ const Projects = () => {
         Project Showcase
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-16 ">
-        <div className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
+        <motion.div 
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1 }}
+        className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
           <div className=" ">
             <Image
               className=" "
@@ -30,8 +35,12 @@ const Projects = () => {
               <FaGithub  className="size-5 lg:size-8 text-[#fff]" />
                 </Link>
             </div> 
-        </div>
-        <div className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
+        </motion.div>
+        <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: -100 }}
+        transition={{ duration: 1 }}
+         className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
           <div className=" ">
             <Image
               className=" "
@@ -51,8 +60,12 @@ const Projects = () => {
               <FaGithub  className="size-5 lg:size-8 text-[#fff]" />
                 </Link>
             </div> 
-        </div>
-        <div className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
+        </motion.div>
+        <motion.div 
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: 100 }}
+        transition={{ duration: 1 }}
+        className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
           <div className=" ">
             <Image
               className=" "
@@ -72,8 +85,12 @@ const Projects = () => {
               <FaGithub  className="size-5 lg:size-8 text-[#fff]" />
                 </Link>
             </div> 
-        </div>
-        <div className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
+        </motion.div>
+        <motion.div
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: -100 }}
+        transition={{ duration: 1 }}
+        className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
           <div className=" ">
             <Image
               className=" "
@@ -93,8 +110,12 @@ const Projects = () => {
               <FaGithub  className="size-5 lg:size-8 text-[#fff]" />
                 </Link>
             </div> 
-        </div>   
-        <div className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
+        </motion.div>   
+        <motion.div
+        whileInView={{ opacity: 1, y: 0 }}
+        initial={{ opacity: 0, y: 100 }}
+        transition={{ duration: 1 }}
+         className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
           <div className=" ">
             <Image
               className=" "
@@ -114,8 +135,12 @@ const Projects = () => {
               <FaGithub  className="size-5 lg:size-8 text-[#fff]" />
                 </Link>
             </div> 
-        </div>
-        <div className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
+        </motion.div>
+        <motion.div 
+        whileInView={{ opacity: 1, x: 0 }}
+        initial={{ opacity: 0, x: 100 }}
+        transition={{ duration: 1 }}
+        className=" flex flex-col justify-center bg-[#2EB2D300] border-2 border-gray-500 p-4 lg:p-12 rounded-xl">
           <div className=" ">
             <Image
               className=" "
@@ -135,7 +160,7 @@ const Projects = () => {
               <FaGithub  className="size-5 lg:size-8 text-[#fff]" />
                 </Link>
             </div> 
-        </div>
+        </motion.div>
       </div>
     </div>
   );

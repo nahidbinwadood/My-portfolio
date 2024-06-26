@@ -6,22 +6,23 @@ import { CgMenu } from "react-icons/cg";
 import { AiOutlineClose } from "react-icons/ai";
 import MenuOverlay from "@/Components/MenuOverlay";
 import { usePathname, useRouter } from "next/navigation";
+import { motion } from "framer-motion"; 
 const navLinks = [
   {
     title: "About",
-    href: "#about",
+    href: "about",
   },
   {
     title: "Skills",
-    href: "#skills",
+    href: "skills",
   },
   {
     title: "Projects",
-    href: "#projects",
+    href: "projects",
   },
   {
     title: "Contact",
-    href: "/contact",
+    href: "contact",
   },
 ];
 
@@ -32,15 +33,20 @@ const Navbar = () => {
   const path = router.pathname;
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-10  bg-[#000319] px-8 md:px-0 ">
-      <div className="flex flex-wrap items-center justify-between py-8 container mx-auto">
+    <motion.nav
+      initial={{y:-100,opacity:0}}
+      animate={{y:0,opacity:1}}
+      transition={{duration:0.8,delay:0.5}}
+       
+     className="fixed top-0 left-0 right-0 z-10  bg-opacity-20 backdrop-blur-md bg-[#000319] px-16 md:px-0 ">
+      <div className=" flex flex-wrap items-center w-full justify-between container mx-auto  py-8">
         <Link
           href={"/"}
           className="text-2xl md:text-5xl text-white font-semibold"
         >
           Nahid
         </Link>
-        <div className="mobile-menu block md:hidden">
+        <div className="-mr-44 md:hidden">
           {!navbarOpen ? (
             <button
               onClick={() => setNavbarOpen(true)}
@@ -77,7 +83,7 @@ const Navbar = () => {
         </div>
       </div>
       <div>{navbarOpen ? <MenuOverlay links={navLinks} /> : null}</div>
-    </nav>
+    </motion.nav>
   );
 };
 
