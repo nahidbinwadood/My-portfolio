@@ -22,7 +22,7 @@ const Projects = () => {
               height={240}
               width={540}
               alt="eliteEstate"
-              src="/assets/eliteEstate.png"
+              src="/assets/elite.png"
             />
           </div>
           <div>
