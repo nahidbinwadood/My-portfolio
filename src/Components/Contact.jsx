@@ -6,7 +6,7 @@ import { FaFacebookSquare, FaGithubSquare,FaLinkedin  } from "react-icons/fa";
 import { motion } from "framer-motion";
 const Contact = () => {
   return (
-    <div id="contact" className="text-white mt-24 lg:h-[100vh] ">
+    <div id="contact" className="text-white mt-24 mb-16 ">
       <h2 className="text-2xl md:text-4xl font-bold text-center ">
         Contact Me
       </h2>
