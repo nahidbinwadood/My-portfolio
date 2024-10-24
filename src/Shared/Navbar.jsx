@@ -1,6 +1,6 @@
 "use client";
 import NavLink from "@/Components/NavLink";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import React, { useState } from "react";
 import { CgMenu } from "react-icons/cg";
 import { AiOutlineClose } from "react-icons/ai";
@@ -41,8 +41,12 @@ const Navbar = () => {
      className="fixed top-0 left-0 right-0 z-10  bg-opacity-20 backdrop-blur-md bg-[#000319] px-16 md:px-0 ">
       <div className=" flex flex-wrap items-center w-full justify-between container mx-auto  py-8">
         <Link
-          href={"/"}
-          className="text-2xl md:text-5xl text-white font-semibold"
+            to="hero"
+            spy={true}
+            smooth={true}
+            offset={-140}
+            duration={700}
+          className="text-2xl md:text-5xl cursor-pointer text-white font-semibold"
         >
           Nahid
         </Link>
@@ -73,13 +77,13 @@ const Navbar = () => {
           </ul>
         </div>
         <div>
-          <Link
+          <a
             target="_blank"
-            href="https://drive.google.com/file/d/1xff-w6lkeZwSFN005npR9ZXiuzQRIkvn/view?usp=sharing"
-            className="bg-[#2EB2D3] hidden md:block font-semibold px-6 py-2 md:px-12 md:py-4 text-white rounded-full"
+            href="https://drive.google.com/file/d/1vankp2j-CHVIYh8auEcTUFMesC1u4qDx/view"
+            className="bg-[#2EB2D3] hidden md:block font-semibold px-6 py-2 cursor-pointer md:px-12 md:py-4 text-white rounded-full"
           >
             My Resume
-          </Link>
+          </a>
         </div>
       </div>
       <div>{navbarOpen ? <MenuOverlay links={navLinks} /> : null}</div>
